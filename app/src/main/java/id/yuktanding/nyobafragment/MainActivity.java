@@ -8,10 +8,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        //itemArrayList.add(new Item());
+
     }
 
     class NewAdapter extends FragmentPagerAdapter{
@@ -57,10 +65,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position){
+                case 0:
+                    return "List Anime";
+                case 1:
+                    return "Detail";
+                case 2:
+                    return "Author";
+            }
+            return null;
+        }
+
+        @Override
         public int getCount() {
             return 3;
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -68,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

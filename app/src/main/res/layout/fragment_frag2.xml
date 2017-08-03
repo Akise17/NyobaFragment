@@ -1,13 +1,51 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="id.yuktanding.nyobafragment.Frag2">
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="id.yuktanding.nyobafragment.Frag2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<!-- TODO: Update blank fragment layout -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/img_anime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:contentDescription="" />
+
+        <TextView
+            android:id="@+id/txt_judulAnime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:hint="judul_anime"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/txt_ratingAnime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="rating"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/txt_sinopsisAnime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="sinopsis_here"
+            android:textAlignment="inherit"/>
+
+
+    </LinearLayout>
 
 </FrameLayout>
